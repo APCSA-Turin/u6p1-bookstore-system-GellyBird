@@ -44,11 +44,11 @@ public class User{
     // public String bookListInfo(){} //returns a booklist for the user, if empty, output "empty"
     public String bookListInfo(){
         String bookStr = "";
-            for (int i = 0; i < book.length; i ++) {
-                if (book[i] == null) {
+            for (int i = 0; i < book.length; i ++) { // check every book in book list
+                if (book[i] == null) { // if it is null then add empty to the string
                     bookStr += "empty\n";
                 } else {
-                    bookStr += book[i].bookInfo() + "\n";
+                    bookStr += book[i].bookInfo() + "\n"; // if it is not null then add the book's complete info to the string
                 }
             }
         return bookStr;
